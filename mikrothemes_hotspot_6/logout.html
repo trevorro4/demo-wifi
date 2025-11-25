@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>MikroThemes hotspot > logout</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="description" content="Mikrotik Templates">
+    <meta name="keywords" content="MikroThemes">
+    <meta name="author" content="Loogika S.A.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="libs/boostrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+
+<div class="table-respodstnsive">
+    <table class="table">
+<tr>
+<td align="center" valign="middle">
+<b>You have just logged out/Acabas de cerrar sesion</b> <br><br>
+<table class="table table-striped table-bordered table-hover">
+<tr><td align="right">user name</td><td>$(username)</td></tr>
+<tr><td align="right">IP address</td><td>$(ip)</td></tr>
+<tr><td align="right">MAC address</td><td>$(mac)</td></tr>
+<tr><td align="right">session time</td><td>$(uptime)</td></tr>
+$(if session-time-left)
+<tr><td align="right">time left</td><td>$(session-time-left)</td></tr>
+$(endif)
+<tr><td align="right">bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+</table>
+<br>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+<button type="submit" class="btn btn-secondary">Log in/Iniciar sesion</button>
+</form>
+</td>
+</table>
+</div>
+<div class="row">
+    <div class="col-sm-12 p-1 text-center">
+        <div style="color: #c1c1c1; font-size: 12px">Powered by <a class="text-dark" href="http://www.mikrothemes.com" target="_blank">MikroThemes</a></div>
+    </div>
+</div>
+</body>
+</html>
